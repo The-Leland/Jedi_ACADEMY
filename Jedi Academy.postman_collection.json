@@ -1,0 +1,1818 @@
+{
+  "info": {
+    "_postman_id": "f8dc417a-8f70-4cb4-94a1-41d337a72391",
+    "name": "Jedi Academy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47793727"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "67c4958f-4291-401d-a273-dd930f2baaf7",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"obiwan@jedi.com\",\r\n  \"password\": \"hello_there\",\r\n  \"username\": \"obiwan\",\r\n  \"force_rank\": \"Jedi Master\",\r\n  \"midi_count\": 15000\r\n}\r\n\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/user/auth",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "user",
+                "auth"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/user",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/user/c80278f9-0ac7-4100-9d62-a6be6c850427",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "user",
+                "c80278f9-0ac7-4100-9d62-a6be6c850427"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"anakin\",\r\n  \"email\": \"anakin@jedi.com\",\r\n  \"password\": \"sand_sucks\",\r\n  \"force_rank\": \"Jedi Knight\",\r\n  \"midi_count\": 27000\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/user",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"force_rank\": \"Jedi Grand Master\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/user/4ae71449-3414-47d0-972e-10d0aa13082a",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "user",
+                "4ae71449-3414-47d0-972e-10d0aa13082a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/user/4ae71449-3414-47d0-972e-10d0aa13082a",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "user",
+                "4ae71449-3414-47d0-972e-10d0aa13082a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"kanaan\",\r\n  \"email\": \"kanaan@jedi.com\",\r\n  \"password\": \"force123\",\r\n  \"force_rank\": \"Knight\",\r\n  \"midi_count\": 14000\r\n}\r\n\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/user",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Temples",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/temple",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "temple"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"temple_name\": \"Jedi Temple\",\r\n  \"planet\": \"Coruscant\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/temple",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "temple"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"temple_name\": \"Jedi Temple\",\r\n  \"planet\": \"Coruscant\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/temple/ecec2d49-e4d3-47c4-b3c8-3ec54ad5be6b",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "temple",
+                "ecec2d49-e4d3-47c4-b3c8-3ec54ad5be6b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"planet\": \"Coruscant Prime\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/temple/ecec2d49-e4d3-47c4-b3c8-3ec54ad5be6b",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "temple",
+                "ecec2d49-e4d3-47c4-b3c8-3ec54ad5be6b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/temple/ecec2d49-e4d3-47c4-b3c8-3ec54ad5be6b",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "temple",
+                "ecec2d49-e4d3-47c4-b3c8-3ec54ad5be6b"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Species",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/species",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "species"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"species_name\": \"Human\",\r\n  \"homeworld\": \"Coruscant\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/species",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "species"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"species_name\": \"Human\",\r\n  \"homeworld\": \"Coruscant\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/species/387761d5-8cbb-44a6-99c9-fe463ac75eff",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "species",
+                "387761d5-8cbb-44a6-99c9-fe463ac75eff"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"homeworld\": \"Coruscant Prime\"\r\n}\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/species/387761d5-8cbb-44a6-99c9-fe463ac75eff",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "species",
+                "387761d5-8cbb-44a6-99c9-fe463ac75eff"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/species/387761d5-8cbb-44a6-99c9-fe463ac75eff",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "species",
+                "387761d5-8cbb-44a6-99c9-fe463ac75eff"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Masters",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/master",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "master"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"user_id\": \"4ae71449-3414-47d0-972e-10d0aa13082a\",\r\n  \"master_name\": \"Master Windu\",\r\n  \"specialization\": \"Form VII - Vaapad\",\r\n  \"years_training\": 20,\r\n  \"max_padawans\": 1\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/master",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "master"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"specialization\": \"Form III – Soresu (Revised)\"\r\n}\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/master/0405597c-fd1a-4038-92ea-91ab7516e547",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "master",
+                "0405597c-fd1a-4038-92ea-91ab7516e547"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"specialization\": \"Form III – Soresu (Revised)\"\r\n}\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/master/0405597c-fd1a-4038-92ea-91ab7516e547",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "master",
+                "0405597c-fd1a-4038-92ea-91ab7516e547"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/master/0405597c-fd1a-4038-92ea-91ab7516e547",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "master",
+                "0405597c-fd1a-4038-92ea-91ab7516e547"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Padawans",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/species",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "species"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/padawan/0948f327-979f-404e-a959-372286ba9d1d",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "padawan",
+                "0948f327-979f-404e-a959-372286ba9d1d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"training_level\": 4\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/padawan/0948f327-979f-404e-a959-372286ba9d1d",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "padawan",
+                "0948f327-979f-404e-a959-372286ba9d1d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/padawan/0948f327-979f-404e-a959-372286ba9d1d",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "padawan",
+                "0948f327-979f-404e-a959-372286ba9d1d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"master_id\": \"0405597c-fd1a-4038-92ea-91ab7516e547\",\r\n  \"user_id\": \"c80278f9-0ac7-4100-9d62-a6be6c850427\",\r\n  \"species_id\": \"035aba0e-4efb-4a5a-bc56-b9b167a8f268\",\r\n  \"padawan_name\": \"Ezra Bridger\",\r\n  \"age\": 15,\r\n  \"training_level\": 1\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/padawan",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "padawan"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Crystals",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/crystal",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "crystal"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"crystal_type\": \"Kyber\",\r\n  \"origin_planet\": \"Ilum\",\r\n  \"rarity_level\": \"Rare\",\r\n  \"force_amplify\": 1.25\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/crystal",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "crystal"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/crystal/85552e4f-b7d0-43ef-9f8a-1c3575c97451",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "crystal",
+                "85552e4f-b7d0-43ef-9f8a-1c3575c97451"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"origin_planet\": \"Jedha\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/crystal/85552e4f-b7d0-43ef-9f8a-1c3575c97451",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "crystal",
+                "85552e4f-b7d0-43ef-9f8a-1c3575c97451"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8086/crystal/85552e4f-b7d0-43ef-9f8a-1c3575c97451",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "crystal",
+                "85552e4f-b7d0-43ef-9f8a-1c3575c97451"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Lightsabers",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"owner_id\": \"48c66fb6-03c9-4a45-997c-0d2ee75ec0dc\",\r\n  \"crystal_id\": \"482c1f19-d26c-41fa-80c1-1fecfca77227\",\r\n  \"saber_name\": \"KanaanSaber_\",\r\n  \"hilt_material\": \"Durasteel\",\r\n  \"blade_color\": \"Blue\",\r\n  \"is_completed\": false\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/lightsaber",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "lightsaber"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"owner_id\": \"48c66fb6-03c9-4a45-997c-0d2ee75ec0dc\",\r\n  \"crystal_id\": \"482c1f19-d26c-41fa-80c1-1fecfca77227\",\r\n  \"saber_name\": \"KanaanSaber_\",\r\n  \"hilt_material\": \"Durasteel\",\r\n  \"blade_color\": \"Blue\",\r\n  \"is_completed\": false\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/lightsaber",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "lightsaber"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"owner_id\": \"48c66fb6-03c9-4a45-997c-0d2ee75ec0dc\",\r\n  \"crystal_id\": \"482c1f19-d26c-41fa-80c1-1fecfca77227\",\r\n  \"saber_name\": \"KanaanSaber_\",\r\n  \"hilt_material\": \"Durasteel\",\r\n  \"blade_color\": \"Blue\",\r\n  \"is_completed\": false\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/lightsaber/327b9e8d-6e28-43a2-9f84-af5da96734cf",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "lightsaber",
+                "327b9e8d-6e28-43a2-9f84-af5da96734cf"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"blade_color\": \"Green\",\r\n  \"is_completed\": true\r\n}\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/lightsaber/327b9e8d-6e28-43a2-9f84-af5da96734cf",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "lightsaber",
+                "327b9e8d-6e28-43a2-9f84-af5da96734cf"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Courses",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"instructor_id\": \"0405597c-fd1a-4038-92ea-91ab7516e547\",\r\n  \"course_name\": \"Advanced Vaapad Techniques\",\r\n  \"difficulty\": \"Expert\",\r\n  \"duration_weeks\": 8,\r\n  \"max_students\": 6\r\n}\r\n\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/course",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "course"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"instructor_id\": \"0405597c-fd1a-4038-92ea-91ab7516e547\",\r\n  \"course_name\": \"Advanced Vaapad Techniques\",\r\n  \"difficulty\": \"Expert\",\r\n  \"duration_weeks\": 8,\r\n  \"max_students\": 6\r\n}\r\n\r\n\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/course",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "course"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"instructor_id\": \"0405597c-fd1a-4038-92ea-91ab7516e547\",\r\n  \"course_name\": \"Advanced Vaapad Techniques\",\r\n  \"difficulty\": \"Expert\",\r\n  \"duration_weeks\": 8,\r\n  \"max_students\": 6\r\n}\r\n\r\n\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/course/4bbcc689-79c0-48f9-bead-2720097739f9",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "course",
+                "4bbcc689-79c0-48f9-bead-2720097739f9"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"difficulty\": \"Intermediate\",\r\n  \"max_students\": 10\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/course/4bbcc689-79c0-48f9-bead-2720097739f9",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "course",
+                "4bbcc689-79c0-48f9-bead-2720097739f9"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"instructor_id\": \"0405597c-fd1a-4038-92ea-91ab7516e547\",\r\n  \"course_name\": \"Advanced Vaapad Techniques\",\r\n  \"difficulty\": \"Expert\",\r\n  \"duration_weeks\": 8,\r\n  \"max_students\": 6\r\n}\r\n\r\n\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/course/4bbcc689-79c0-48f9-bead-2720097739f9",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "course",
+                "4bbcc689-79c0-48f9-bead-2720097739f9"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"instructor_id\": \"0405597c-fd1a-4038-92ea-91ab7516e547\",\r\n  \"course_name\": \"Advanced Vaapad Techniques\",\r\n  \"difficulty\": \"Expert\",\r\n  \"duration_weeks\": 8,\r\n  \"max_students\": 6\r\n}\r\n\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/course",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "course"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Padawan Courses",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"padawan_id\": \"6e3b10f6-0da6-4196-beaf-f335f6e763e6\",\r\n  \"course_id\": \"d593cdad-a845-4f57-9d0d-2afb4670052d\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/padawan-course",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "padawan-course"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"padawan_id\": \"6e3b10f6-0da6-4196-beaf-f335f6e763e6\",\r\n  \"course_id\": \"d593cdad-a845-4f57-9d0d-2afb4670052d\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/padawan-course",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "padawan-course"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"padawan_id\": \"6e3b10f6-0da6-4196-beaf-f335f6e763e6\",\r\n  \"course_id\": \"d593cdad-a845-4f57-9d0d-2afb4670052d\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/padawan-course/6e3b10f6-0da6-4196-beaf-f335f6e763e6/d593cdad-a845-4f57-9d0d-2afb4670052d",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "padawan-course",
+                "6e3b10f6-0da6-4196-beaf-f335f6e763e6",
+                "d593cdad-a845-4f57-9d0d-2afb4670052d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"final_score\": 95.5\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/padawan-course/6e3b10f6-0da6-4196-beaf-f335f6e763e6/d593cdad-a845-4f57-9d0d-2afb4670052d",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "padawan-course",
+                "6e3b10f6-0da6-4196-beaf-f335f6e763e6",
+                "d593cdad-a845-4f57-9d0d-2afb4670052d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "auth",
+                "value": "ad3e7e59-c07b-47df-83a1-39edc8059ed9",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"padawan_id\": \"6e3b10f6-0da6-4196-beaf-f335f6e763e6\",\r\n  \"course_id\": \"d593cdad-a845-4f57-9d0d-2afb4670052d\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8086/padawan-course/6e3b10f6-0da6-4196-beaf-f335f6e763e6/d593cdad-a845-4f57-9d0d-2afb4670052d",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8086",
+              "path": [
+                "padawan-course",
+                "6e3b10f6-0da6-4196-beaf-f335f6e763e6",
+                "d593cdad-a845-4f57-9d0d-2afb4670052d"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
